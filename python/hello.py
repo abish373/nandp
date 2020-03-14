@@ -1,9 +1,6 @@
 
 from gtts import gTTS 
-  
-
-
-
+ 
 
 def something():
 	 mytext = 'Welcome to geeksforgeeks!'
