@@ -1,10 +1,42 @@
-<h1>your text is</h1> <h6><%= text.name %></h6>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style type="text/css">
 
-<a href="../python/mpfile/<%= text.name %>.mp3" download>Download</a>
+.usrtxt {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: auto;
+}
+.usrpara {
+	border: 1px solid black;
+	width:80%;
+	margin: auto;
+}
+.output{
+	margin-top: 5vh;
+	display: flex;
+	justify-content: space-around;
+}
+.dwnld {
+	background-color: rgba(26,26,26,.8);
+	padding: 10px;
+	color: white;
+}
+</style>
+
+<div class="usrtxt">
+	<h1 style="text-align: center;">Your text is:</h1> <p class="usrpara"><%= text.name %></p>
+</div>
 
 
 
-<audio controls>
-  	<source src="../python/mpfile/<%= text.name %>.mp3" type="audio/mpeg">
-  	Your browser does not support the audio element.
-</audio>
+<div class="output">
+	<a href="../python/mpfile/<%= text.name %>.mp3" class="dwnld" download>Download</a>
+
+	<audio controls>
+	  	<source src="../python/mpfile/<%= text.name %>.mp3" type="audio/mpeg">
+	  	Your browser does not support the audio element.
+	</audio>
+</div>
+
+<img src="../python/mpfile/1.jpg" style="display:none">

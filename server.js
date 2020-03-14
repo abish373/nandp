@@ -7,17 +7,12 @@ const path = require('path')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-// app.use(express.static('python'));
-// app.use(express.static('views'));
 
-app.use('/python', express.static(path.join(__dirname, 'python')))
 app.use('/views', express.static(path.join(__dirname, 'views')))
+app.use('/python', express.static(path.join(__dirname, 'python')))
 
 
 app.set('view engine','ejs')
-
-
-
 
 app.get('/',(req,res)=>{
 	res.render('index');
@@ -28,9 +23,9 @@ app.get('/output',(req,res)=>{
 	res.send("req.body.usertext")
 })
 
-// app.get('/test',(req,res)=>{
-// 	res.render("test")
-// })
+app.get('/test',(req,res)=>{
+	res.render("test")
+})
 
 
 app.post('/name', callName); 

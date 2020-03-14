@@ -2,11 +2,28 @@
 <html>
 <head>
 	<title>PDF reader</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style type="text/css">
+	
+#form {
+	width: 60%;
+	margin:auto;
+}
+h1 {
+	text-align: center;
+}
+</style>
 </head>
 <body>
-	<form method="post" action="/name">
-		<input type="text" name="usertext">
-		<button>Submit</button>
-	</form>
+	<div id="form">
+		<h1>Enter your text</h1>
+		<form method="post" action="/name" >
+		<!-- <input type="text" name="usertext"> -->
+			<div class="form-group purple-border">
+			  <textarea class="form-control" id="exampleFormControlTextarea4" rows="3" name="usertext"></textarea>
+			</div>
+			<button class="btn btn-primary" style="width: 100%;">Submit</button>
+		</form>
+	</div>
 </body>
 </html>
